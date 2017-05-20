@@ -1,0 +1,84 @@
+nav.default-header {
+    /*
+    background-color: #4cbf64;
+    padding: 2%;
+    */
+    position: fixed;
+    width: 100%;
+    transition: .6s all;
+}
+
+nav.scrolled {
+    background-color: #1c8031 !important;
+    color: white;
+    transition: .6s ease-in;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav.scrolled a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    margin: 0px;
+}
+
+.menu {
+    padding: 3%;
+}
+
+.header-logo {
+    float: left;
+    padding: 2%;
+    color: white;
+}
+
+.header-menu {
+    text-align: right;
+    padding: 2%
+}
+
+.home-image {
+    /* float: left; *//* margin-top:10%; *//* width: 100%; *//* position: relative; */
+    height: 110vh;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('home-page-preview.jpg');
+}
+
+.social-icons {
+  padding-top: 25%;
+}
+.social-icons button {
+  padding: 10px;
+  border-radius: 2px;
+  border: 0px;
+  background-color: darkseagreen;
+}
+
+.headers {
+  padding-top: 4%;
+}
+
+.work_group {
+  padding: 10%;
+    background-color: rgba(0, 128, 0, 0.55);
+}
+.work_image {
+  width: 100%;
+    z-index: 10;
+}
+.work_desc {
+  margin-top: -22px;
+    position: absolute;
+    z-index: 100;
+    display: block;
+    color: darkred;
+    background-color: white;
+  }
