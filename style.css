@@ -21,7 +21,7 @@ nav a {
 
 nav.scrolled a {
     text-decoration: none;
-    color: white;
+
 }
 
 body {
@@ -53,32 +53,47 @@ body {
 }
 
 .social-icons {
-  padding-top: 25%;
+    padding-top: 25%;
 }
+
 .social-icons button {
-  padding: 10px;
-  border-radius: 2px;
-  border: 0px;
-  background-color: darkseagreen;
+    padding: 10px;
+    border-radius: 2px;
+    border: 0px;
+    background-color: darkseagreen;
 }
 
 .headers {
-  padding-top: 4%;
+    padding-top: 4%;
 }
 
 .work_group {
-  padding: 10%;
-    background-color: rgba(0, 128, 0, 0.55);
+    position: relative;
+    border: 1px solid black;
+    z-index: -1;
 }
+
 .work_image {
-  width: 100%;
-    z-index: 10;
+    width: 100%;
 }
+
 .work_desc {
-  margin-top: -22px;
     position: absolute;
-    z-index: 100;
-    display: block;
-    color: darkred;
+    bottom: 0px;
     background-color: white;
-  }
+    color: darkred;
+    width: 100%;
+    padding: 0px;
+    line-height: 0px;
+}
+
+.work_content {
+    padding: 0px;
+
+}
+
+.selected {
+    color: red;
+    font-size: 24px;
+    font-family: fantasy;
+}
