@@ -7,7 +7,7 @@ function init() {
   menu_elements.push(document.getElementById("header_about"));
   menu_elements.push(document.getElementById("header_contact"));
 
-  Helper.addClass(menu_elements[0], "selected");
+  G_Helper.addClass(menu_elements[0], "selected");
 
   document.addEventListener("scroll", function () {
     Menu.setFixedHeader();

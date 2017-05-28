@@ -1,4 +1,4 @@
-class Helper {
+class G_Helper {
   /**
    * @param element - elements need to be add a class
    * @param classNames -  classNames with space separated;
@@ -29,9 +29,9 @@ class Menu {
   static setFixedHeader() {
     let nav = document.getElementsByTagName("nav")[0];
     if (window.scrollY > 50) {
-      Helper.addClass(nav, "scrolled");
+      G_Helper.addClass(nav, "scrolled");
     } else {
-      Helper.removeClass(nav, "scrolled");
+      G_Helper.removeClass(nav, "scrolled");
     }
   }
 
@@ -60,12 +60,12 @@ class Menu {
       //console.warn("home");
     }
 
-    Helper.addClass(activeMenu, "selected");
+    G_Helper.addClass(activeMenu, "selected");
 
     menuElements.forEach(function (aTag) {
       if (aTag != activeMenu) {
         console.log(aTag.innerHTML);
-        Helper.removeClass(aTag, "selected");
+        G_Helper.removeClass(aTag, "selected");
       }
     })
   }
