@@ -99,3 +99,22 @@ body {
     font-family: fantasy;
     transition: .2s cubic-bezier(1, 0, 0.15, 1.02);
 }
+
+.page {
+    height: 100vh;
+
+}
+.cadetblue {
+    background-color: cadetblue;
+}
+
+.chartreuse {
+    background-color: chartreuse;
+}
+.chocolate {
+    background-color: chocolate;
+}
+
+table tr {
+    padding: 10px;
+}
