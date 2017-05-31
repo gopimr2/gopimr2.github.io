@@ -12,6 +12,7 @@ nav.scrolled {
     background-color: #1c8031 !important;
     color: white;
     transition: .6s ease-in;
+    z-index: 10;
 }
 
 nav a {
@@ -70,12 +71,12 @@ body {
 
 .work_group {
     position: relative;
-    border: 1px solid black;
-    z-index: -1;
+    z-index: 1;
 }
 
 .work_image {
     width: 100%;
+    border-radius: 23px;
 }
 
 .work_desc {
@@ -105,7 +106,9 @@ body {
 
 }
 .cadetblue {
-    background-color: cadetblue;
+    background-image: url(work_bg.png);
+    background-size: cover;
+    opacity: 0.8;
 }
 
 .chartreuse {
