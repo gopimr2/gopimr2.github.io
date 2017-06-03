@@ -1,13 +1,21 @@
+body {
+    margin: 0px;
+}
+
 nav.default-header {
-    /*
-    background-color: #4cbf64;
-    padding: 2%;
-    */
     position: fixed;
     width: 100%;
     transition: .6s all;
+    z-index: 10;
 }
 
+.g_relative{
+    position: relative;
+}
+
+.g_absolute {
+    position: absolute;
+}
 nav.scrolled {
     background-color: #ffffff !important;
     transition: .6s ease-in;
@@ -25,53 +33,93 @@ nav.scrolled a {
 
 }
 
-body {
-    margin: 0px;
-}
-
 .menu {
     padding: 3%;
 }
 
 .header-logo {
-  float: left;
-  padding-left: 2%;
-  color: white;
+    float: left;
+    padding-left: 2%;
+    color: white;
 }
 
 .logo {
-  color: rgba(28, 86, 162, 0.7);
-  font-size: 46px;
-  font-family: cursive, sans-serif;
-  transition: .2s cubic-bezier(1, 0, 0.15, 1.02);
+    color: rgba(28, 86, 162, 0.7);
+    font-size: 46px;
+    font-family: cursive, sans-serif;
+    transition: .2s cubic-bezier(1, 0, 0.15, 1.02);
 }
+
 .header-menu {
     text-align: right;
     padding-top: 2%;
 }
 
-.home-image {
-    /* float: left; *//* margin-top:10%; *//* width: 100%; *//* position: relative; */
+.selected {
+    color: red;
+    font-size: 24px;
+    font-family: fantasy;
+    transition: .2s cubic-bezier(1, 0, 0.15, 1.02);
+}
+
+/*
+    about page
+*/
+
+.about {
+    width: 100%;
     height: 110vh;
-    text-align: center;
-    background-size: cover;
-    background-position: center center;
-    background-image: url('home-page-preview.jpg');
+    z-index: 1;
+}
+
+.home-image {
+    width: 100%;
+    height: 110vh;
+   /* background-size: cover;
+    background-position: center center;*/
+    filter: blur(4px);
+    opacity: 0.8;
 }
 
 .social-icons {
-    padding-top: 25%;
+    position: absolute;
+    padding-top: 7%;
+    text-align: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
 }
 
-.social-icons button {
-    padding: 10px;
-    border-radius: 2px;
-    border: 0px;
-    background-color: darkseagreen;
+.social {
+    text-decoration: none;
+    color: black;
+    background-color: #eee;
+    padding: 1%;
+    border-radius: 22px;
 }
+
+.social:hover {
+    background-color: #76af76;
+}
+
+/*
+portfolio page
+*/
 
 .headers {
     padding-top: 4%;
+}
+
+.page {
+    height: 100vh;
+}
+
+.cadetblue {
+    background-image: url(work_bg.png);
+    background-size: cover;
+    opacity: 0.8;
 }
 
 .work_group {
@@ -99,38 +147,13 @@ body {
 
 }
 
-.selected {
-    color: red;
-    font-size: 24px;
-    font-family: fantasy;
-    transition: .2s cubic-bezier(1, 0, 0.15, 1.02);
-}
-
-.page {
-    height: 100vh;
-
-}
-.cadetblue {
-    background-image: url(work_bg.png);
-    background-size: cover;
-    opacity: 0.8;
-}
-
-.chocolate {
-    background-color: rgb(63, 155, 167);
-}
-
 table tr {
     padding: 10px;
 }
 
-.social {
-  text-decoration: none;
-  color: black;
-  background-color: #eee;
-  padding: 1%;
-  border-radius: 22px;
-}
-.social:hover {
-  background-color: #76af76;
+/*
+ Contact page
+*/
+.chocolate {
+    background-color: rgb(63, 155, 167);
 }
