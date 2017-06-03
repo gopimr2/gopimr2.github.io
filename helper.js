@@ -4,7 +4,6 @@ class G_Helper {
    * @param classNames -  classNames with space separated;
    * */
   static addClass(element, classNames) {
-    console.log("add Class ", element.className);
     if (element.className === undefined) {
       element.className = classNames;
     } else if (element.className.indexOf(classNames) === -1) {
@@ -17,7 +16,6 @@ class G_Helper {
    * @param className -  a class name
    * */
   static removeClass(element, className) {
-    console.log("REMOVE CLASS - ", element.className);
     if (element.className !== undefined && element.className.indexOf(className) !== -1) {
       element.className = element.className.replace(className, "");
     }
@@ -36,37 +34,36 @@ class Menu {
   }
 
   static activeMenuWhenScroll(menuElements) {
-    let work = document.getElementById("work");
-    let about = document.getElementById("about");
+    let work = document.getElementById("portfolio");
     let contact = document.getElementById("contact");
 
-    console.log(window.scrollY, work.getBoundingClientRect().top, about.getBoundingClientRect().top, contact.getBoundingClientRect().top);
-    let activeMenu;
-    if ((work.getBoundingClientRect().top - 1) < 0) {
-      //console.warn("work ", work.getBoundingClientRect().top);
-      activeMenu = menuElements[1];
+    let work_top_position = work.getBoundingClientRect().top,
+        contact_top_position = contact.getBoundingClientRect().top;
 
+    //console.log(window.scrollY, work_top_position, contact_top_position);
+
+    let activeMenu;
+    if ((work_top_position - 1) < 0) {
+      //console.warn("work ", work_top_position);
+      activeMenu = menuElements[1];
     }
-    if ((about.getBoundingClientRect().top - 1) < 0) {
+    if (( contact_top_position - 1) < 0) {
+      //console.warn("contact ",contact_top_position);
       activeMenu = menuElements[2];
-      //console.warn("about ",about.getBoundingClientRect().top);
-    }
-    if (( contact.getBoundingClientRect().top - 90) < 0) {
-      activeMenu = menuElements[3];
-      //console.warn("contact ",contact.getBoundingClientRect().top);
     }
     if (window.scrollY < 50) {
-      activeMenu = menuElements[0];
       //console.warn("home");
+      activeMenu = menuElements[0];
     }
 
-    G_Helper.addClass(activeMenu, "selected");
-
-    menuElements.forEach(function (aTag) {
-      if (aTag != activeMenu) {
-        console.log(aTag.innerHTML);
-        G_Helper.removeClass(aTag, "selected");
-      }
-    })
+    if(activeMenu) {
+      G_Helper.addClass(activeMenu, "selected")
+      menuElements.forEach(function (aTag) {
+        if (aTag != activeMenu) {
+          //console.log(aTag.innerHTML);
+          G_Helper.removeClass(aTag, "selected");
+        }
+      })
+    }
   }
 }
