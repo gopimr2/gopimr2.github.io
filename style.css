@@ -123,3 +123,14 @@ body {
 table tr {
     padding: 10px;
 }
+
+.social {
+  text-decoration: none;
+  color: black;
+  background-color: #eee;
+  padding: 1%;
+  border-radius: 22px;
+}
+.social:hover {
+  background-color: #76af76;
+}
