@@ -6,14 +6,14 @@ function init() {
   menu_elements.push(document.getElementById("header_portfolio"));
   menu_elements.push(document.getElementById("header_contact"));
 
-  G_Helper.addClass(menu_elements[0], "selected");
-
-  Menu.activeMenuWhenScroll(menu_elements);
-
-  document.addEventListener("scroll", function () {
+  function headerManipulation(){
     Menu.setFixedHeader();
     Menu.activeMenuWhenScroll(menu_elements);
-  });
+  }
+
+  headerManipulation();
+
+  document.addEventListener("scroll", headerManipulation);
 }
 
 window.addEventListener('load', init, false);

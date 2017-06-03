@@ -9,15 +9,15 @@ nav.default-header {
 }
 
 nav.scrolled {
-    background-color: #1c8031 !important;
-    color: white;
+    background-color: #ffffff !important;
     transition: .6s ease-in;
+    box-shadow: -2px -2px 17px 12px rgba(103, 69, 69, 0.51);
     z-index: 10;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 nav.scrolled a {
@@ -35,11 +35,16 @@ body {
 
 .header-logo {
   float: left;
-  padding-top: 2%;
   padding-left: 2%;
   color: white;
 }
 
+.logo {
+  color: rgba(28, 86, 162, 0.7);
+  font-size: 46px;
+  font-family: cursive, sans-serif;
+  transition: .2s cubic-bezier(1, 0, 0.15, 1.02);
+}
 .header-menu {
     text-align: right;
     padding-top: 2%;
@@ -111,11 +116,8 @@ body {
     opacity: 0.8;
 }
 
-.chartreuse {
-    background-color: chartreuse;
-}
 .chocolate {
-    background-color: chocolate;
+    background-color: rgb(63, 155, 167);
 }
 
 table tr {
